@@ -4,12 +4,12 @@ import { AiOutlineClose } from 'react-icons/ai';
 import personInfo from '../lib/personInfo';
 import Link from 'next/link';
 export function Header() {
+  // const [colorH, setColorH] = useState('bg-[#1b1a2ea9]');
   const [colorH, setColorH] = useState('bg-[#1b1a2ea9]');
   const [menu, setMenu] = useState(false);
   // useEffect(() => {
   //   setColorH('bg-[#1b1a2ea9]');
   // }, []);
-  const classH = { size: 'h-60' };
   function menuHeight(num: Number) {
     // The most important implication of how Tailwind extracts class names
     //  is that it will only find classes that exist as complete
@@ -40,13 +40,13 @@ export function Header() {
   }
   return (
     <div
-      className={`ease-in-out duration-300 fixed flex flex-col w-full ${
+      className={`overflow-hidden ease-in-out duration-300 fixed  flex-col w-full  ${
         menu ? 'h-16' : menuHeight(personInfo.tabs.length)
-      } shadow-2xl  ${colorH} text-white text-center`}
+      } shadow-2xl  ${colorH} text-white text-center `}
     >
-      <div className='flex  content-between justify-between'>
+      <div className='flex content-between mx-10 justify-between p-2 '>
         <div className='text-purple-500 text-3xl font-semibold p-3 ml-6'>AJ</div>
-        <div onClick={() => setMenu(!menu)} className='w-12 p-2 text-purple-600 mr-6  '>
+        <div onClick={() => setMenu(!menu)} className='w-12 p-2 text-purple-600 mr-6 '>
           {menu ? <GiHamburgerMenu size={32} /> : <AiOutlineClose size={32} />}
         </div>
       </div>

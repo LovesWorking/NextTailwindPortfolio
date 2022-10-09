@@ -22,7 +22,7 @@ const personInfo: PersonObject = {
     { icon: <MdPersonOutline key={'about'} size={'32'} />, label: 'About', url: '/about' },
     {
       icon: <HiOutlineLightBulb key={'projects'} size={'32'} />,
-      label: 'projects',
+      label: 'Projects',
       url: '/projects',
     },
     {
