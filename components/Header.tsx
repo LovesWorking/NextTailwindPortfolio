@@ -6,7 +6,7 @@ import Link from 'next/link';
 export function Header() {
   // const [colorH, setColorH] = useState('bg-[#1b1a2ea9]');
   const [colorH, setColorH] = useState('bg-[#1b1a2ea9]');
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState(true);
   // useEffect(() => {
   //   setColorH('bg-[#1b1a2ea9]');
   // }, []);
@@ -50,7 +50,7 @@ export function Header() {
           {menu ? <GiHamburgerMenu size={32} /> : <AiOutlineClose size={32} />}
         </div>
       </div>
-      <div className='text-xl px-16 flex flex-col w-full overflow-hidden text-left'>
+      <div className='text-xl px-16 flex flex-col w-full overflow-hidden text-left align'>
         {personInfo.tabs.map((tab, i) => {
           return (
             <Link href={tab.url} key={i}>
