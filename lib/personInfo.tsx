@@ -25,7 +25,11 @@ interface PersonObject {
   name: { fName: string; lName: string };
   tabs: { icon: ReactElement; label: string; url: string }[];
   experinceTypeWritter: { myExperince: string[] };
-  introduceMyself: { me: ReactElement; hobbies: { img: string; text: string }[] };
+  introduceMyself: {
+    me: ReactElement;
+    hobbies: { img: string; text: string }[];
+    badges: string[];
+  };
   findMeOn: { name: string; icon: IconType; url: string }[];
 }
 const personInfo: PersonObject = {
@@ -96,6 +100,32 @@ const personInfo: PersonObject = {
       { img: '/dogwlak.gif', text: 'Walking the dog' },
       { img: '/botw.gif', text: ' Zelda BOTW' },
       { img: '/matrixCat.gif', text: ' Open Source' },
+    ],
+    badges: [
+      'GraphQL(Apollo)',
+      'Typescript',
+      'React',
+      'Next.js',
+      'Node.js',
+      'Express',
+      'Redux',
+      'Chart.js',
+      'SQL (PostgreSQL)',
+      'NoSQL',
+      'Jest',
+      'React Testing Library',
+      'SuperTest',
+      'Bcrypt',
+      'JWTs',
+      'OAuth',
+      'Git (Hooks,Actions)',
+      'Webpack',
+      'Google Lighthouse',
+      'NPM',
+      'Puppeteer',
+      'Restful APIs',
+      'D3.js',
+      'Tailwind',
     ],
   },
   findMeOn: [
