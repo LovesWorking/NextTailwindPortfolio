@@ -18,11 +18,12 @@ export function Greeting() {
             <strong className='uppercase text-purple-500'> {personInfo.name.fName}&nbsp;</strong>
             <strong className='uppercase text-purple-500'> {personInfo.name.lName}</strong>
           </p>
+          <p className=''>A software engineer with experince in</p>
         </h1>
         <div className='text-purple-500 text-4xl '>
           <Typewriter
             options={{
-              strings: personInfo.whoIAmTypeWritter.whoIAm,
+              strings: personInfo.experinceTypeWritter.myExperince,
               autoStart: true,
               loop: true,
             }}

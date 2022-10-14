@@ -3,13 +3,9 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import personInfo from '../lib/personInfo';
 import Link from 'next/link';
-export function Header() {
-  // const [colorH, setColorH] = useState('bg-[#1b1a2ea9]');
+export function Navbar() {
   const [colorH, setColorH] = useState('bg-[#1b1a2ea9]');
   const [menu, setMenu] = useState(true);
-  // useEffect(() => {
-  //   setColorH('bg-[#1b1a2ea9]');
-  // }, []);
   function menuHeight(num: Number) {
     // The most important implication of how Tailwind extracts class names
     //  is that it will only find classes that exist as complete

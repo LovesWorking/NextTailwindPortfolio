@@ -1,9 +1,22 @@
 import { GiHamburgerMenu } from 'react-icons/gi';
-import { AiOutlineClose, AiOutlineHome } from 'react-icons/ai';
+import {
+  AiOutlineClose,
+  AiOutlineHome,
+  AiFillGithub,
+  AiFillLinkedin,
+  AiFillInstagram,
+  AiOutlineTwitter,
+} from 'react-icons/ai';
 import { MdPersonOutline } from 'react-icons/md';
 import { HiOutlineLightBulb } from 'react-icons/hi';
+import { TiSocialLinkedinCircular } from 'react-icons/ti';
 import { RiFilePaperLine } from 'react-icons/ri';
+import { TiSocialLinkedin } from 'react-icons/ti';
 import { Component, ReactElement } from 'react';
+import { IconType } from 'react-icons';
+import Carosuel from '../components/HobbieCarousel';
+import dynamic from 'next/dynamic';
+import { Suspense } from 'react';
 
 // The portfolio webpage pulls from this person object.
 // This is the only file you need to edit.
@@ -11,8 +24,9 @@ import { Component, ReactElement } from 'react';
 interface PersonObject {
   name: { fName: string; lName: string };
   tabs: { icon: ReactElement; label: string; url: string }[];
-  whoIAmTypeWritter: { whoIAm: string[] };
-  introduceMyself: { me: ReactElement };
+  experinceTypeWritter: { myExperince: string[] };
+  introduceMyself: { me: ReactElement; hobbies: { img: string; text: string }[] };
+  findMeOn: { name: string; icon: IconType; url: string }[];
 }
 const personInfo: PersonObject = {
   name: {
@@ -20,7 +34,7 @@ const personInfo: PersonObject = {
     lName: 'Johnson',
   },
   tabs: [
-    { icon: <AiOutlineHome key={'home'} size={'32'} />, label: 'Home', url: '/home' },
+    { icon: <AiOutlineHome key={'home'} size={'32'} />, label: 'Home', url: '/' },
     { icon: <MdPersonOutline key={'about'} size={'32'} />, label: 'About', url: '/about' },
     {
       icon: <HiOutlineLightBulb key={'projects'} size={'32'} />,
@@ -33,18 +47,31 @@ const personInfo: PersonObject = {
       url: '/resume',
     },
   ],
-  whoIAmTypeWritter: {
-    whoIAm: [
-      'MERN Stack Developer',
+  experinceTypeWritter: {
+    myExperince: [
+      'MERN Stack',
       'HTML, CSS, JavaScript',
       'NodeJS, ExpressJS',
       'ReactJS, NextJS',
+      'Redux',
+      'SQL, NoSQL',
+      'Jest, React Testing Library, SuperTest',
+      'Bcrypt',
+      'Next Auth, OAuth',
+      'Git (Hooks, Actions), Github',
+      'Github',
+      'Google Lighthouse',
+      'Restful APIs',
+      'Tailwind',
+      'GraphQL(Apollo)',
+      'NPM',
     ],
   },
   introduceMyself: {
     me: (
-      <div className='text-white text-2xl'>
-        <p className='mt-3 '>
+      <div className=' text-white text-2xl'>
+        <p className='text-center pt-36 text-4xl text-white'>Who am I ?</p>
+        <p className='mt-3'>
           I inititally started programming in <span className='text-purple-500'>2006</span> with{' '}
           <span className='text-purple-500'>Visual Basic</span> and I have been hooked ever since!
         </p>
@@ -58,8 +85,40 @@ const personInfo: PersonObject = {
           <span className='text-purple-500'>Express</span> and{' '}
           <span className='text-purple-500'>Tailwind</span>
         </p>
+        <br />
+        <p className='text-center'>Interests & Hobbies</p>
+        <Carosuel />
       </div>
     ),
+    hobbies: [
+      { img: '/camping.gif', text: ' Camping With The Family' },
+      { img: '/smashbro.gif', text: ' Super Smash Bros' },
+      { img: '/dogwlak.gif', text: 'Walking the dog' },
+      { img: '/botw.gif', text: ' Zelda BOTW' },
+      { img: '/matrixCat.gif', text: ' Open Source' },
+    ],
   },
+  findMeOn: [
+    {
+      name: 'GitHub',
+      icon: AiFillGithub,
+      url: 'https://github.com/LovesWorking',
+    },
+    {
+      name: 'Linkedin',
+      icon: TiSocialLinkedin,
+      url: 'https://www.linkedin.com/in/lovesworking/',
+    },
+    {
+      name: 'Instagram',
+      icon: AiFillInstagram,
+      url: 'https://www.Instagram.com/',
+    },
+    {
+      name: 'Twitter',
+      icon: AiOutlineTwitter,
+      url: 'https://www.Twitter.com/in/',
+    },
+  ],
 };
 export default personInfo;

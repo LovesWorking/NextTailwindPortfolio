@@ -1,15 +1,17 @@
 import type { NextPage } from 'next';
-import { Header } from '../components/Header';
+import { Navbar } from '../components/Navbar';
 import Particle from '../components/Particle';
 import { Greeting } from '../components/Greeting';
 import { IntroduceMyself } from '../components/IntroduceMyself';
+import { FindMe } from '../components/FindMe';
 const Home: NextPage = () => {
   return (
     <div>
-      <Header />
-      <div className='flex flex-wrap justify-around'>
+      <Navbar />
+      <div className='flex flex-wrap justify-around mb-36'>
         <Greeting />
         <IntroduceMyself />
+        <FindMe />
       </div>
       <Particle />
     </div>
