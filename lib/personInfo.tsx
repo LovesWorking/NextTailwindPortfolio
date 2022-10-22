@@ -31,6 +31,15 @@ interface PersonObject {
     badges: string[];
   };
   findMeOn: { name: string; icon: IconType; url: string }[];
+  projects: {
+    name: string;
+    icon: IconType;
+    url: string;
+    img: string;
+    imgAlt: string;
+    title: string;
+    desc: string;
+  }[];
 }
 const personInfo: PersonObject = {
   name: {
@@ -148,6 +157,35 @@ const personInfo: PersonObject = {
       name: 'Twitter',
       icon: AiOutlineTwitter,
       url: 'https://www.Twitter.com/in/',
+    },
+  ],
+  projects: [
+    {
+      name: 'AirIot',
+      icon: AiFillGithub,
+      url: 'https://www.linkedin.com/in/lovesworking/',
+      img: '/botw.gif',
+      imgAlt: 'AirIot project Image',
+      title: 'Control non iot devices with air quality data ',
+      desc: 'Manipulation of non iot-devices through air quality data with custom triggers to turn smart plugs on/off.',
+    },
+    {
+      name: 'AirIot',
+      icon: AiFillGithub,
+      url: 'https://www.linkedin.com/in/lovesworking/',
+      img: '/botw.gif',
+      imgAlt: 'AirIot project Image',
+      title: 'Control non iot devices with air quality data ',
+      desc: 'Manipulation of non iot-devices through air quality data with custom triggers to turn smart plugs on/off.',
+    },
+    {
+      name: 'AirIot',
+      icon: AiFillGithub,
+      url: 'https://www.linkedin.com/in/lovesworking/',
+      img: '/botw.gif',
+      imgAlt: 'AirIot project Image',
+      title: 'Control non iot devices with air quality data ',
+      desc: 'Manipulation of non iot-devices through air quality data with custom triggers to turn smart plugs on/off.',
     },
   ],
 };
