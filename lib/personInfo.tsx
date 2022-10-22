@@ -17,10 +17,10 @@ import { IconType } from 'react-icons';
 import Carosuel from '../components/HobbieCarousel';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
-
-// The portfolio webpage pulls from this person object.
-// This is the only file you need to edit.
-
+// *********************************************************
+// *The portfolio webpage pulls from this person object.*****
+// *       This is the only file you need to edit.          *
+// *********************************************************
 interface PersonObject {
   name: { fName: string; lName: string };
   tabs: { icon: ReactElement; label: string; url: string }[];

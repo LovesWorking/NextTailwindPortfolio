@@ -21,7 +21,7 @@ export default function HobbieCarousel() {
               }
             >
               <img src={el.img} className='block w-full' alt={el.text} />
-              <div className='carousel-caption  md:block absolute -bottom-[6%]    text-center'>
+              <div className='carousel-caption  md:block text-center'>
                 {/* <h5 className='text-xl'>{el.text}</h5> */}
                 <p className='bg-black rounded-full text-center '>{el.text}</p>
               </div>
