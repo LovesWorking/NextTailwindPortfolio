@@ -1,12 +1,12 @@
 import personInfo from '../lib/personInfo';
 export function Projects() {
   return (
-    <div className='grid grid-cols-2 '>
+    <div className='flex flex-wrap items-center justify-center '>
       {personInfo.projects.map((el, i) => {
         return (
           <>
-            <div className='mx-6 max-w-sm rounded-xl overflow-hidden shadow-lg shadow-purple-500 mb-10'>
-              <img className='w-full' src={el.img} alt={el.imgAlt} />
+            <div className=' mx-6 max-w-sm rounded-xl overflow-hidden shadow-lg shadow-purple-500 mb-10'>
+              <img className='w-full  ' src={el.img} alt={el.imgAlt} />
               <div className='px-6 py-4'>
                 <div className='font-bold text-xl mb-2 text-white'>{el.title}</div>
                 <p className='text-purple-500 font-bold'>{el.desc} </p>
