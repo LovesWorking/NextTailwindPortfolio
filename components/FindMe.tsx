@@ -3,9 +3,9 @@ import Link from 'next/link';
 export function FindMe() {
   return (
     <>
-      <p className='mt-6 text-white text-3xl text-center w-screen'>Connect with me on</p>
+      <p className=' mt-6 text-white text-3xl text-center w-screen'>Connect with me on</p>
       <br />
-      <div className='mt-6 flex flex-wrap  text-purple-800 space-x-6 ml-auto mr-auto'>
+      <div className='mb-6 flex flex-wrap  text-purple-800 space-x-6  items-center justify-center w-full'>
         {personInfo.findMeOn.map((el, i) => {
           return (
             <a

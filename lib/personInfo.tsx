@@ -54,11 +54,6 @@ const personInfo: PersonObject = {
       label: 'Projects',
       url: '/projects',
     },
-    {
-      icon: <RiFilePaperLine key={'resume'} size={'32'} />,
-      label: 'Resume',
-      url: '/resume',
-    },
   ],
   experinceTypeWritter: {
     myExperince: [
@@ -165,7 +160,7 @@ const personInfo: PersonObject = {
       icon: AiFillGithub,
       url: 'https://www.linkedin.com/in/lovesworking/',
       img: '/botw.gif',
-      imgAlt: 'AirIot project Image',
+      imgAlt: 'AirIot project Preview',
       title: 'Control non iot devices with air quality data ',
       desc: 'Manipulation of non iot-devices through air quality data with custom triggers to turn smart plugs on/off.',
     },

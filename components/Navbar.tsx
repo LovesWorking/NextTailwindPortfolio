@@ -52,7 +52,7 @@ export function Navbar() {
             <Link href={tab.url} key={i}>
               <div className='flex text-center p-3 '>
                 {tab.icon}
-                <p className='pl-3 pt-1'> {tab.label}</p>
+                <p className='pl-3 pt-1 cursor-pointer'> {tab.label}</p>
               </div>
             </Link>
           );

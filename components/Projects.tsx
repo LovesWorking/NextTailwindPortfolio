@@ -1,4 +1,5 @@
 import personInfo from '../lib/personInfo';
+import { FindMe } from './FindMe';
 export function Projects() {
   return (
     <div className='flex flex-wrap items-center justify-center '>
@@ -26,6 +27,7 @@ export function Projects() {
           </>
         );
       })}
+      <FindMe />
     </div>
   );
 }
