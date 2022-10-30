@@ -10,7 +10,6 @@ const Home: NextPage = () => {
       <Navbar />
       <div className='flex flex-wrap justify-around mb-36'>
         <Greeting />
-        <IntroduceMyself />
         <FindMe />
       </div>
       <Particle />

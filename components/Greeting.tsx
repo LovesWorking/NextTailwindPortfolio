@@ -30,7 +30,13 @@ export function Greeting() {
           />
         </div>
       </div>
-      <img className='' src='/desk.svg' alt='Person at desk programming' width='400' height='400' />
+      <img
+        className=''
+        src='/programmerX.gif'
+        alt='Person at desk programming'
+        width='400'
+        height='400'
+      />
     </div>
   );
 }

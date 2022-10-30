@@ -39,6 +39,7 @@ interface PersonObject {
     imgAlt: string;
     title: string;
     desc: string;
+    techStack: string[];
   }[];
 }
 const personInfo: PersonObject = {
@@ -66,7 +67,7 @@ const personInfo: PersonObject = {
       'Jest, React Testing Library, SuperTest',
       'Bcrypt',
       'Next Auth, OAuth',
-      'Git (Hooks, Actions), Github',
+      'Git (Hooks, Actions)',
       'Github',
       'Google Lighthouse',
       'Restful APIs',
@@ -78,7 +79,6 @@ const personInfo: PersonObject = {
   introduceMyself: {
     me: (
       <div className=' text-white text-2xl'>
-        <p className='text-center pt-36 text-4xl text-white'>Who am I ?</p>
         <p className='mt-3'>
           I inititally started programming in <span className='text-purple-500'>2006</span> with{' '}
           <span className='text-purple-500'>Visual Basic</span> and I have been hooked ever since!
@@ -158,11 +158,22 @@ const personInfo: PersonObject = {
     {
       name: 'AirIot',
       icon: AiFillGithub,
-      url: 'https://www.linkedin.com/in/lovesworking/',
+      url: 'https://github.com/LovesWorking/Air-Iot',
       img: '/botw.gif',
       imgAlt: 'AirIot project Preview',
       title: 'Control non iot devices with air quality data ',
       desc: 'Manipulation of non iot-devices through air quality data with custom triggers to turn smart plugs on/off.',
+      techStack: ['Next.js'],
+    },
+    {
+      name: 'Air-Free',
+      icon: AiFillGithub,
+      url: 'https://www.linkedin.com/in/lovesworking/',
+      img: '/botw.gif',
+      imgAlt: 'Air-Free project Image',
+      title: 'Global air quality interactive map highlighting air quality in your local area',
+      desc: 'An Open Source global map to track air quality data around the world in real time while also keeping historical data backed up to allow easy comparing of air quality in your area ',
+      techStack: ['Next.js', 'D3.js', 'GraphQL'],
     },
     {
       name: 'AirIot',
@@ -172,15 +183,7 @@ const personInfo: PersonObject = {
       imgAlt: 'AirIot project Image',
       title: 'Control non iot devices with air quality data ',
       desc: 'Manipulation of non iot-devices through air quality data with custom triggers to turn smart plugs on/off.',
-    },
-    {
-      name: 'AirIot',
-      icon: AiFillGithub,
-      url: 'https://www.linkedin.com/in/lovesworking/',
-      img: '/botw.gif',
-      imgAlt: 'AirIot project Image',
-      title: 'Control non iot devices with air quality data ',
-      desc: 'Manipulation of non iot-devices through air quality data with custom triggers to turn smart plugs on/off.',
+      techStack: ['Next.js'],
     },
   ],
 };

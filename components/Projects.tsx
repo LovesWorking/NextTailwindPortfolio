@@ -23,6 +23,20 @@ export function Projects() {
                   </a>
                 </div>
               </div>
+              <div className='flex flex-wrap'>
+                <p className='text-white w-full text-center font-bold'>Tech Stack</p>
+
+                {el.techStack.map((el, i) => {
+                  return (
+                    <p
+                      key={i}
+                      className='  text-center font-bold m-2 text-purple-500 cursor-pointer hover:border-purple-800   p-3 rounded-full w-auto mr-3 border-solid border-2 overflow-hidden border-purple-500'
+                    >
+                      {el}
+                    </p>
+                  );
+                })}
+              </div>
             </div>
           </>
         );

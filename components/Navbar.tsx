@@ -38,21 +38,32 @@ export function Navbar() {
     <div
       className={`overflow-hidden ease-in-out duration-300 fixed  flex-col w-full  ${
         menu ? 'h-16' : menuHeight(personInfo.tabs.length)
-      } shadow-2xl  ${colorH} text-white text-center `}
+      } shadow-2xl  ${colorH} text-white text-center sm:h-16 `}
     >
       <div className='flex content-between mx-10 justify-between p-2 '>
         <div className='text-purple-500 text-3xl font-semibold p-3 ml-6'>AJ</div>
-        <div onClick={() => setMenu(!menu)} className='w-12 p-2 text-purple-600 mr-6 '>
+        <div className='invisible sm:visible text-xl  flex   w-full sm:w-full overflow-hidden text-left align content-center align-center'>
+          {personInfo.tabs.map((tab, i) => {
+            return (
+              <Link href={tab.url} key={i}>
+                <div className='flex text-center p-3  shrink'>
+                  <p className='pl-3 pt-1 cursor-pointer hover:text-purple-500'> {tab.label}</p>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+        <div onClick={() => setMenu(!menu)} className='w-12 p-2 text-purple-600 mr-6 sm:invisible '>
           {menu ? <GiHamburgerMenu size={32} /> : <AiOutlineClose size={32} />}
         </div>
       </div>
-      <div className='text-xl px-16 flex flex-col w-full overflow-hidden text-left align'>
+      <div className='text-xl px-16 flex flex-col  w-full sm:w-full overflow-hidden text-left align'>
         {personInfo.tabs.map((tab, i) => {
           return (
             <Link href={tab.url} key={i}>
               <div className='flex text-center p-3 '>
                 {tab.icon}
-                <p className='pl-3 pt-1 cursor-pointer'> {tab.label}</p>
+                <p className='pl-3 pt-1 cursor-pointer hover:text-purple-500'> {tab.label}</p>
               </div>
             </Link>
           );
