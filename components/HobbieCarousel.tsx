@@ -1,34 +1,27 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import personInfo from '../lib/personInfo';
-export default function HobbieCarousel() {
-  useEffect(() => {
-    if (typeof window !== undefined) {
-      const tailwind = require('tw-elements');
-    }
-  });
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from 'react-slick';
 
+export default function HobbieCarousel() {
+  var settings = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: true,
+  };
   return (
-    <div id='carouselExampleCaptions' className='carousel slide  ' data-bs-ride='carousel'>
-      <div className='carousel-inner  w-full overflow-hidden'>
-        {personInfo.introduceMyself.hobbies.map((el, i) => {
-          return (
-            <div
-              key={i}
-              className={
-                i === 0
-                  ? 'carousel-item active  float-left w-full '
-                  : 'carousel-item  float-left w-full'
-              }
-            >
-              <img src={el.img} className='block w-full' alt={el.text} />
-              <div className='carousel-caption  md:block text-center'>
-                {/* <h5 className='text-xl'>{el.text}</h5> */}
-                <p className='bg-black rounded-full text-center '>{el.text}</p>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </div>
+    <Slider {...settings}>
+      {personInfo.introduceMyself.hobbies.map((el, i) => {
+        return (
+          <div key={i}>
+            <img className='w-[100%] ' src={el.img} />
+            <p className='text-center'>{el.text}</p>
+          </div>
+        );
+      })}
+    </Slider>
   );
 }

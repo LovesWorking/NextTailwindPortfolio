@@ -3,7 +3,9 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 import personInfo from '../lib/personInfo';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 export function Navbar() {
+  const router = useRouter();
   const [colorH, setColorH] = useState('bg-[#1b1a2ea9]');
   const [menu, setMenu] = useState(true);
   function menuHeight(num: Number) {
@@ -47,7 +49,16 @@ export function Navbar() {
             return (
               <Link href={tab.url} key={i}>
                 <div className='flex text-center p-3  shrink'>
-                  <p className='pl-3 pt-1 cursor-pointer hover:text-purple-500'> {tab.label}</p>
+                  <p
+                    className={
+                      tab.url === router.asPath
+                        ? 'text-purple-500 l-3 pt-1 cursor-pointer hover:text-purple-500'
+                        : 'l-3 pt-1 cursor-pointer hover:text-purple-500'
+                    }
+                  >
+                    {' '}
+                    {tab.label}
+                  </p>
                 </div>
               </Link>
             );
@@ -63,7 +74,15 @@ export function Navbar() {
             <Link href={tab.url} key={i}>
               <div className='flex text-center p-3 '>
                 {tab.icon}
-                <p className='pl-3 pt-1 cursor-pointer hover:text-purple-500'> {tab.label}</p>
+                <p
+                  className={
+                    tab.url === router.asPath
+                      ? 'text-purple-500  pl-3 pt-1 cursor-pointer hover:text-purple-500'
+                      : 'pl-3 pt-1 cursor-pointer hover:text-purple-500'
+                  }
+                >
+                  {tab.label}
+                </p>
               </div>
             </Link>
           );

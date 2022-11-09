@@ -5,7 +5,7 @@ import Typewriter from 'typewriter-effect';
 
 export function Greeting() {
   return (
-    <div className=' flex pt-36 px-12 flex-wrap  justify-center m-1 p-1 ml-[10%] mr-[10%]'>
+    <div className=' flex pt-36 px-12 flex-wrap justify-center m-1 p-1 ml-[10%] mr-[10%]'>
       <div>
         <h1 className=' text-white font-light  text-4xl '>
           <div className='flex'>
@@ -30,13 +30,15 @@ export function Greeting() {
           />
         </div>
       </div>
-      <img
-        className=''
-        src='/programmerX.gif'
-        alt='Person at desk programming'
-        width='400'
-        height='400'
-      />
+      <div className='w-full '>
+        <img
+          className='mr-auto ml-auto'
+          src='/programmerX.gif'
+          alt='Person at desk programming'
+          width='400'
+          height='400'
+        />
+      </div>
     </div>
   );
 }
