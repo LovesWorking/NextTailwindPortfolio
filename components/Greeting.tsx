@@ -33,8 +33,8 @@ export function Greeting() {
       <div className='w-full '>
         <img
           className='mr-auto ml-auto'
-          src='/programmerX.gif'
-          alt='Person at desk programming'
+          src={personInfo.experinceTypeWritter.homeImage.src}
+          alt={personInfo.experinceTypeWritter.homeImage.alt}
           width='400'
           height='400'
         />

@@ -14,7 +14,6 @@ import { RiFilePaperLine } from 'react-icons/ri';
 import { TiSocialLinkedin } from 'react-icons/ti';
 import { Component, ReactElement } from 'react';
 import { IconType } from 'react-icons';
-import Carosuel from '../components/HobbieCarousel';
 import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 // *********************************************************
@@ -22,9 +21,10 @@ import { Suspense } from 'react';
 // *       This is the only file you need to edit.          *
 // *********************************************************
 interface PersonObject {
+  mainSiteColor: string;
   name: { fName: string; lName: string };
   tabs: { icon: ReactElement; label: string; url: string }[];
-  experinceTypeWritter: { myExperince: string[] };
+  experinceTypeWritter: { myExperince: string[]; homeImage: { src: string; alt: string } };
   introduceMyself: {
     me: ReactElement;
     hobbies: { img: string; text: string }[];
@@ -43,6 +43,7 @@ interface PersonObject {
   }[];
 }
 const personInfo: PersonObject = {
+  mainSiteColor: '',
   name: {
     fName: 'Austin',
     lName: 'Johnson',
@@ -75,10 +76,11 @@ const personInfo: PersonObject = {
       'GraphQL(Apollo)',
       'NPM',
     ],
+    homeImage: { src: '/programmerX.gif', alt: 'Person at desk programming' },
   },
   introduceMyself: {
     me: (
-      <div className=' text-white text-2xl'>
+      <h1>
         <p className='mt-3'>
           I inititally started programming in <span className='text-purple-500'>2006</span> with{' '}
           <span className='text-purple-500'>Visual Basic</span> and I have been hooked ever since!
@@ -93,10 +95,7 @@ const personInfo: PersonObject = {
           <span className='text-purple-500'>Express</span> and{' '}
           <span className='text-purple-500'>Tailwind</span>
         </p>
-        <br />
-        <p className='text-center'>Interests & Hobbies</p>
-        <Carosuel />
-      </div>
+      </h1>
     ),
     hobbies: [
       { img: '/camping.gif', text: ' Camping With The Family' },
