@@ -6,6 +6,14 @@ module.exports = {
     ['./src/**/*.{html,js}',
       './node_modules/tw-elements/dist/js/**/*.js'],
   ],
+  theme: {
+    extend: {
+      colors: {
+        brand: 'rgb(var(--color-brand) / <alpha-value>)',
+        'mainColor': '#a125f7',
+      },
+    },
+  },
   plugins: [
     require('tw-elements/dist/plugin')
   ],

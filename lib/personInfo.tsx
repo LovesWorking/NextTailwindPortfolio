@@ -43,7 +43,7 @@ interface PersonObject {
   }[];
 }
 const personInfo: PersonObject = {
-  mainSiteColor: '',
+  mainSiteColor: 'mainColor',
   name: {
     fName: 'Austin',
     lName: 'Johnson',
@@ -82,18 +82,18 @@ const personInfo: PersonObject = {
     me: (
       <h1>
         <p className='mt-3'>
-          I inititally started programming in <span className='text-purple-500'>2006</span> with{' '}
-          <span className='text-purple-500'>Visual Basic</span> and I have been hooked ever since!
+          I inititally started programming in <span className='text-mainColor'>2006</span> with{' '}
+          <span className='text-mainColor'>Visual Basic</span> and I have been hooked ever since!
         </p>
         <br />
         <p>
           The last few years I have been more focused in web development and mastering
-          <span className='text-purple-500'> Full Stack </span>. I spend most of my time building
-          projects with <span className='text-purple-500'>React</span>,{' '}
-          <span className='text-purple-500'>Next.js</span>,{' '}
-          <span className='text-purple-500'>Node</span> ,{' '}
-          <span className='text-purple-500'>Express</span> and{' '}
-          <span className='text-purple-500'>Tailwind</span>
+          <span className='text-mainColor'> Full Stack </span>. I spend most of my time building
+          projects with <span className='text-mainColor'>React</span>,{' '}
+          <span className='text-mainColor'>Next.js</span>,{' '}
+          <span className='text-mainColor'>Node</span> ,{' '}
+          <span className='text-mainColor'>Express</span> and{' '}
+          <span className='text-mainColor'>Tailwind</span>
         </p>
       </h1>
     ),
@@ -182,6 +182,16 @@ const personInfo: PersonObject = {
       imgAlt: 'AirIot project Image',
       title: 'open-source optimization tool for developing web apps  ',
       desc: 'Panoptic is an open source tool for running technical website audits after code changes to ensure best practices and to make sure site performance has not regressed.',
+      techStack: ['Next.js', 'Chart.js', 'Lighthouse'],
+    },
+    {
+      name: 'NextJS-Tailwind Portfolio',
+      icon: AiFillGithub,
+      url: 'https://github.com/LovesWorking/NextTailwindPortfolio',
+      img: '/gifPort.gif',
+      imgAlt: 'Portfolio Website Image',
+      title: 'Open Source Portfolio Website',
+      desc: 'A Portfolio Website that you can make your own just by editing one file! This makes it easy to use for anyone.',
       techStack: ['Next.js', 'Chart.js', 'Lighthouse'],
     },
   ],

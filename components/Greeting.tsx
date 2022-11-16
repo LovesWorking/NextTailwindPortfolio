@@ -15,12 +15,12 @@ export function Greeting() {
           <br />
           <p className=''>
             I&apos;M&nbsp;
-            <strong className='uppercase text-purple-500'> {personInfo.name.fName}&nbsp;</strong>
-            <strong className='uppercase text-purple-500'> {personInfo.name.lName}</strong>
+            <strong className='uppercase text-mainColor'> {personInfo.name.fName}&nbsp;</strong>
+            <strong className='uppercase text-mainColor'> {personInfo.name.lName}</strong>
           </p>
           <p className=''>A software engineer with experince in</p>
         </h1>
-        <div className='text-purple-500 text-4xl '>
+        <div className='text-mainColor text-4xl '>
           <Typewriter
             options={{
               strings: personInfo.experinceTypeWritter.myExperince,

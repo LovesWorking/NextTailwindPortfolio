@@ -6,7 +6,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 export function Navbar() {
   const router = useRouter();
-  const [colorH, setColorH] = useState('bg-[#1b1a2ea9]');
+  // const [colorH, setColorH] = useState('bg-[#1b1a2ea9]');
+  const [colorH, setColorH] = useState('bg-mainColor/5');
   const [menu, setMenu] = useState(true);
   function menuHeight(num: Number) {
     // The most important implication of how Tailwind extracts class names
@@ -38,12 +39,14 @@ export function Navbar() {
   }
   return (
     <div
-      className={`overflow-hidden ease-in-out duration-300 fixed  flex-col w-full  ${
+      className={`z-10 backdrop-filter backdrop-blur-lg overflow-hidden ease-in-out duration-300 fixed  flex-col w-full ${
         menu ? 'h-16' : menuHeight(personInfo.tabs.length)
       } shadow-2xl  ${colorH} text-white text-center sm:h-16 `}
     >
-      <div className='flex content-between mx-10 justify-between p-2 '>
-        <div className='text-purple-500 text-3xl font-semibold p-3 ml-6'>AJ</div>
+      <div className=' flex content-between mx-10 justify-between p-2 '>
+        <div className='text-mainColor text-3xl font-semibold p-3 ml-6'>
+          {personInfo.name.fName[0] + personInfo.name.lName[0]}
+        </div>
         <div className='invisible sm:visible text-xl  flex   w-full sm:w-full overflow-hidden text-left align content-center align-center'>
           {personInfo.tabs.map((tab, i) => {
             return (
@@ -52,8 +55,8 @@ export function Navbar() {
                   <p
                     className={
                       tab.url === router.asPath
-                        ? 'text-purple-500 l-3 pt-1 cursor-pointer hover:text-purple-500'
-                        : 'l-3 pt-1 cursor-pointer hover:text-purple-500'
+                        ? 'text-mainColor l-3 pt-1 cursor-pointer hover:text-mainColor'
+                        : 'l-3 pt-1 cursor-pointer hover:text-mainColor'
                     }
                   >
                     {' '}
@@ -64,7 +67,7 @@ export function Navbar() {
             );
           })}
         </div>
-        <div onClick={() => setMenu(!menu)} className='w-12 p-2 text-purple-600 mr-6 sm:invisible '>
+        <div onClick={() => setMenu(!menu)} className='w-12 p-2 text-mainColor mr-6 sm:invisible '>
           {menu ? <GiHamburgerMenu size={32} /> : <AiOutlineClose size={32} />}
         </div>
       </div>
@@ -72,13 +75,13 @@ export function Navbar() {
         {personInfo.tabs.map((tab, i) => {
           return (
             <Link href={tab.url} key={i}>
-              <div className='flex text-center p-3 '>
+              <div className='  flex text-center p-3 '>
                 {tab.icon}
                 <p
                   className={
                     tab.url === router.asPath
-                      ? 'text-purple-500  pl-3 pt-1 cursor-pointer hover:text-purple-500'
-                      : 'pl-3 pt-1 cursor-pointer hover:text-purple-500'
+                      ? 'text-mainColor  pl-3 pt-1 cursor-pointer hover:text-mainColor'
+                      : 'pl-3 pt-1 cursor-pointer hover:text-mainColor'
                   }
                 >
                   {tab.label}

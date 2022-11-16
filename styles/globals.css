@@ -11,17 +11,17 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2d1950;
+  background: black;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(178, 121, 216, 0.959);
+  background: theme('colors.mainColor');
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
+  background: theme('colors.mainColor');
   border-radius: 12px;
 }

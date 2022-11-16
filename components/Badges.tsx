@@ -6,7 +6,7 @@ export default function Badges() {
       {personInfo.introduceMyself.badges.map((el, i) => {
         return (
           <p
-            className='font-semibold m-2 text-purple-500 cursor-pointer hover:border-purple-800   p-3 rounded-full w-auto mr-3 border-solid border-2 overflow-hidden border-purple-500'
+            className='font-semibold m-2 text-mainColor cursor-pointer hover:border-mainColor/50   p-3 rounded-full w-auto mr-3 border-solid border-2 overflow-hidden border-mainColor'
             key={i}
           >
             {el}

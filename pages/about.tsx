@@ -7,7 +7,7 @@ import Carosuel from '../components/HobbieCarousel';
 
 export default function About() {
   return (
-    <>
+    <div className='overflow-x-hidden'>
       <Navbar />
       <div className=' text-white text-2xl'>
         <div className='pt-24 pt-26 ml-[10%] mr-[10%]'>
@@ -20,6 +20,6 @@ export default function About() {
       <Badges />
       <FindMe />
       <ParticleBackground />
-    </>
+    </div>
   );
 }

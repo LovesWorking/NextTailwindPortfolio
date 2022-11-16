@@ -13,15 +13,17 @@ export default function HobbieCarousel() {
     arrows: true,
   };
   return (
-    <Slider {...settings}>
-      {personInfo.introduceMyself.hobbies.map((el, i) => {
-        return (
-          <div key={i}>
-            <img className='w-[100%] ' src={el.img} />
-            <p className='text-center'>{el.text}</p>
-          </div>
-        );
-      })}
-    </Slider>
+    <div className='w-[70%] h-[70%] ml-auto mr-auto'>
+      <Slider {...settings}>
+        {personInfo.introduceMyself.hobbies.map((el, i) => {
+          return (
+            <div key={i}>
+              <img className='w-[100%] ' src={el.img} />
+              <p className='text-center'>{el.text}</p>
+            </div>
+          );
+        })}
+      </Slider>
+    </div>
   );
 }
