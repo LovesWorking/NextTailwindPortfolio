@@ -1,34 +1,35 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Next-Tailwind-Portfolio
 
-## Getting Started
+Open source portfolio built with Next.js and Tailwind. You only need to edit one file to make this your own portfolio, making it easy for anyone!
 
-First, run the development server:
+<img width="856" alt="pink1" src="https://user-images.githubusercontent.com/111514077/202530214-aac81904-9e19-4842-9704-9a151f9ff48d.png">
+
+
+##This was created for the purpose of allowing anyone to deploy their own portfolio website very easily reguardless of experince and in very little time.
+
+## Quickstart
+
+First, install, build and run the Next.JS app:
 
 ```bash
-npm run dev
-# or
-yarn dev
+npm i
+# Then
+npm run build
+# Then
+npm start
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Making it your own
+Find the file called personInfo.tsx in the LIB folder and edit personInfo object to have your information. The fields are self explanatory.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+<img width="722" alt="personinfofile" src="https://user-images.githubusercontent.com/111514077/202530607-60181b32-648a-4461-bc62-7e22b9c6975e.png">
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Changing the color
+If you want a different color you'll need to edit the tailwind.config.js file and change the color labeled mainColor
 
-## Learn More
+<img width="646" alt="colorTail" src="https://user-images.githubusercontent.com/111514077/202531093-e24736d6-839d-4de0-ac46-ce33de914f3f.png">
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+Everyone is free to contribute. Fork the project, make changes and make a pull request. If you find bugs open an issue, or you can fix it yourself just by forking, making changes and making a pull request.
