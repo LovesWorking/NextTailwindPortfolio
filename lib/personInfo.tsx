@@ -81,23 +81,41 @@ const personInfo: PersonObject = {
   introduceMyself: {
     me: (
       <h1>
-        <p className='mt-3'>
-          I inititally started programming in <span className='text-mainColor'>2006</span> with{' '}
-          <span className='text-mainColor'>Visual Basic</span> and I have been hooked ever since!
-        </p>
-        <br />
-        <p>
-        I'm a seasoned software developer with a passion for building high-quality, scalable, and robust web applications. I first dipped my toes into the world of programming 16 years ago, working with Visual Basic, and I've been hooked ever since. Over the years, I've honed my skills, becoming proficient in various programming languages, frameworks, and libraries.
-
-My love for programming took me on a thrilling ride a few years ago when I ventured into web development, which quickly became my specialty. I was ecstatic to be accepted into a tech accelerator program that challenged me to become a full-stack developer using cutting-edge technologies like React and Node.js. The 90-day program was a fantastic learning experience, allowing me to work on various projects, tackle complex problems, and refine my skills to an unprecedented level.
-
-After graduating from the accelerator, I took my passion to the next level by joining B2E, a similar program that focused on Angular and .NET. Over the intense 12-week course, I learned how to craft responsive and innovative web applications that cater to the needs of modern users. As a result, I gained invaluable experience in building web applications from scratch, collaborating with other developers, and working under tight deadlines.
-
-Throughout my career, I've built a plethora of full-stack web applications, both as an individual and as part of a team. My focus has always been on creating products that are intuitive, user-friendly, and responsive. I love the thrill of the creative process, from designing the architecture to writing code and testing the product. There's nothing like seeing a project come to fruition, knowing that it solves a problem and makes people's lives easier.
-
-To sum it up, I'm a passionate, innovative, and technically skilled software developer with extensive experience in web development. My enthusiasm for technology and programming is infectious, and I'm always looking for ways to take on new challenges and learn new things.
-        </p>
-      </h1>
+      <p className='mt-3'>
+        I initially started programming in <span className='text-mainColor'>2006</span> with{' '}
+        <span className='text-mainColor'>Visual Basic</span>, and I have been hooked ever since!
+      </p>
+      <br />
+      <p>
+        I&apos;m a seasoned <span className='text-mainColor'>software developer</span> with a passion for building high-quality, scalable, and robust web applications. 
+        Over the years, I&apos;ve honed my skills, becoming proficient in various programming languages, frameworks, and libraries.
+        My love for programming took me on a thrilling ride a few years ago when I ventured into web development, which quickly became my specialty.
+      </p>
+      <br />
+      <p>
+        I was ecstatic to be accepted into a tech accelerator program that challenged me to become a <span className='text-mainColor'>full-stack developer</span> using cutting-edge technologies like <span className='text-mainColor'>React</span> and <span className='text-mainColor'>Node.js</span>.
+        The 90-day program was a fantastic learning experience, allowing me to work on various projects, tackle complex problems, and refine my skills to an unprecedented level.
+      </p>
+      <br />
+      <p>
+        After graduating from the accelerator, I took my passion to the next level by joining B2E, a similar program that focused on <span className='text-mainColor'>Angular</span> and <span className='text-mainColor'>.NET</span>. 
+        Over the intense 12-week course, I learned how to craft responsive and innovative web applications that cater to the needs of modern users. 
+        As a result, I gained invaluable experience in building web applications from scratch, collaborating with other developers, and working under tight deadlines.
+      </p>
+      <br />
+      <p>
+        Throughout my career, I&apos;ve built a plethora of  <span className='text-mainColor'>full-stack web applications</span>, both as an individual and as part of a team. 
+        My focus has always been on creating products that are intuitive, user-friendly, and responsive. 
+        I love the thrill of the creative process, from designing the architecture to writing code and testing the product. 
+        There&apos;s nothing like seeing a project come to fruition, knowing that it solves a problem and makes people&apos;s lives easier.
+      </p>
+      <br />
+      <p>
+        To sum it up, I&apos;m a passionate, innovative, and technically skilled <span className='text-mainColor'>software developer</span> with extensive experience in <span className='text-mainColor'>web development</span>. 
+        My enthusiasm for <span className='text-mainColor'>technology</span> and <span className='text-mainColor'>programming</span> is infectious, and I&apos;m always looking for ways to take on new challenges and learn new things.
+      </p>
+    </h1>
+    
     ),
     hobbies: [
       { img: '/camping.gif', text: ' Camping With The Family' },
